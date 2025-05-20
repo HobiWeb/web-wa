@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize Your Bed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css custom home.css">
+</head>
+<body>
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="p-5 rounded-lg shadow-lg w-full max-w-7xl">
+            <h1 class="text-5xl font-bold mb-6 text-center">Customize Your Bed</h1>
+            <div class="flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 mb-6 md:mb-0 relative">
+                    <div class="absolute top-0 left-0 w-full h-full p-4 flex flex-col justify-center items-start bg-black bg-opacity-0 text-white">
+                        <p><span id="selectedBaseMaterial"></span></p>
+                        <p><span id="selectedSupportLayer"></span></p>
+                        <p><span id="selectedComfortLayer"></span></p>
+                        <p><span id="selectedLayerLast"></span></p>
+                        <p><span id="selectedAdditionalLayer"></span></p>
+                    </div>
+                    <div class="image-container">
+                        <img id="baseMaterialImage" src="" alt="">
+                        <img id="supportLayerImage" src="" alt="">
+                        <img id="comfortLayerImage" src="" alt="">
+                        <img id="layerLastImage" src="" alt="">
+                        <img id="additionalLayerImage" src="" alt="">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 md:pl-6">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">Base Material</label>
+                        <select class="w-full p-2 border border-gray-300 rounded" id="baseMaterial" onchange="updateSelection()">
+                            <option value="none">None</option>
+                            <option value="18cm Pocket Encasement + Rl">18cm Pocket Encasement + Rl</option>
+                            <option value="20cm Semi Ortho Foam (D50)">20cm Semi Ortho Foam (D50)</option>
+                            <option value="20cm Ortho Foam (D70)">20cm Ortho Foam (D70)</option>
+                            <option value="20cm Foam (D24)">20cm Foam (D24)</option>
+                            <option value="22cm Pocket Encasement + Rl">22cm Pocket Encasement + Rl</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">Support Layer</label>
+                        <select class="w-full p-2 border border-gray-300 rounded" id="supportLayer" onchange="updateSelection()">
+                            <option value="none">None</option>
+                            <option value="4cm Orthopedic (D120)">4cm Orthopedic (D120)</option>
+                            <option value="10cm Semi Orthopedic D50">10cm Semi Orthopedic D50</option>
+                            <option value="4cm Semi Orthopedic D50">4cm Semi Orthopedic D50</option>
+                            <option value="15cm Semi Orthopedic D50">15cm Semi Orthopedic D50</option>
+                            <option value="5cm Semi Orthopedic D50">5cm Semi Orthopedic D50</option>
+                            <option value="6cm D24">6cm D24</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">Comfort Layer</label>
+                        <select class="w-full p-2 border border-gray-300 rounded" id="comfortLayer" onchange="updateSelection()">
+                            <option value="none">None</option>
+                            <option value="2cm D24">2cm D24</option>
+                            <option value="2cm R50">2cm R50</option>
+                            <option value="3cm R50">3cm R50</option>
+                            <option value="Synth Latex D26 1,5cm">Synth Latex D26 1,5cm</option>
+                            <option value="Synth Latex D26 2cm">Synth Latex D26 2cm</option>
+                            <option value="Synth Latex D50 2cm">Synth Latex D50 2cm</option>
+                            <option value="Synth Latex D50 5cm">Synth Latex D50 5cm</option>
+                            <option value="Memory Foam A Grade (Min Qty 1,6m3) 4cm">Memory Foam A Grade 4cm</option>
+                            <option value="Latex A Grade 5cm">Latex A Grade 5cm</option>
+                            <option value="Latex B Grade 5cm">Latex B Grade 5cm</option>
+                            <option value="Memory Foam B Grade (Min Qty 1,6m3) 4cm">Memory Foam B Grade 4cm</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">Extra Layer</label>
+                        <select class="w-full p-2 border border-gray-300 rounded" id="layerLast" onchange="updateSelection()">
+                            <option value="none">None</option>
+                            <option value="2cm D24">2cm D24</option>
+                            <option value="2cm R50">2cm R50</option>
+                            <option value="3cm R50">3cm R50</option>
+                            <option value="Synth Latex D26 1,5cm">Synth Latex D26 1,5cm</option>
+                            <option value="Synth Latex D26 2cm">Synth Latex D26 2cm</option>
+                            <option value="Synth Latex D50 2cm">Synth Latex D50 2cm</option>
+                            <option value="Synth Latex D50 5cm">Synth Latex D50 5cm</option>
+                            <option value="Memory Foam A Grade (Min Qty 1,6m3) 4cm">Memory Foam A Grade 4cm</option>
+                            <option value="Latex A Grade 5cm">Latex A Grade 5cm</option>
+                            <option value="Latex B Grade 5cm">Latex B Grade 5cm</option>
+                            <option value="Memory Foam B Grade (Min Qty 1,6m3) 4cm">Memory Foam B Grade 4cm</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">Finishing</label>
+                        <select class="w-full p-2 border border-gray-300 rounded" id="additionalLayer" onchange="updateSelection()">
+                            <option value="none">None</option>
+                            <option value="1 Side 5 Cm Quilting Top">1 Side 5 Cm Quilting Top</option>
+                            <option value="1 Side Non Quilting">1 Side Non Quilting</option>
+                            <option value="2 Side 5 Cm Quilting 2X">2 Side 5 Cm Quilting 2X</option>
+                            <option value="2 Side 5 Cm Quilting - Non Quilting">2 Side 5 Cm Quilting - Non Quilting</option>
+                            <option value="2 Side Non Quilting 2X">2 Side Non Quilting 2X</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-bold mb-2">Size</label>
+                        <select class="w-full p-2 border border-gray-300 rounded" id="size" onchange="updateSelection()">
+                            <option value="0">90 x 200 cm</option>
+                            <option value="1">120 x 200 cm</option>
+                            <option value="2">140 x 200 cm</option>
+                            <option value="3">160 x 200 cm</option>
+                            <option value="4">180 x 200 cm</option>
+                            <option value="5">200 x 200 cm</option>
+                        </select>
+                    </div>
+
+                    <div class="mt-4">
+                        <p class="text-xl font-bold">Total Price: <span id="totalPrice">Rp 0</span></p>
+                        <a onclick="simpanPilihanKeLocalStorage()" 
+   class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 text-center" 
+   href="Preview.html">
+   Next For Looking Finishing Style
+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="java script custom home.js"></script>
+</body>
+</html>

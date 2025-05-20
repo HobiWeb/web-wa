@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Armadillo Signature Custom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css preview.css" />
+  </head>
+  <body class="bg-[#222222] text-white min-h-screen flex flex-col">
+    <main class="relative flex-grow w-full max-w-[1920px] mx-auto h-screen overflow-hidden">
+      <div class="relative w-full h-full">
+        <div class="absolute inset-0 flex">
+          <img src="landscape.jpg" alt="Gambar 1" class="w-full h-full object-cover slide" />
+          <img src="landscape2.jpg" alt="Gambar 2" class="w-full h-full object-cover slide hidden" />
+        </div>
+        <button class="slider-btn right" onclick="nextSlide()">&#10095;</button>
+      </div>
+
+      <form aria-label="Pilih model form" class="absolute top-16 left-6 max-w-[280px] bg-gradient-to-b from-[#1a1f21cc] to-[#1a1f21ee] rounded-md p-6 text-[10px] font-normal" style="backdrop-filter: blur(10px);">
+    <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-3">
+     <div>
+      <label class="block mb-1 text-[8px] text-white opacity-100" for="nama-depan">
+       Nama Depan
+      </label>
+      <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="nama-depan" name="nama-depan" placeholder="" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block mb-1 text-[8px] text-white opacity-100" for="Alamat">
+       Alamat
+      </label>
+      <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="Alamat" name="Alamat" placeholder="" required="" type="text"/>
+     </div>
+    </div>
+    <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-3">
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="no-handphone">
+      No. Handphone
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="no-handphone" name="no-handphone" placeholder="" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="email">
+      Email
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="email" name="email" placeholder="" required="" type="text"/>
+      </div>
+     </div>
+     <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-3">
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="base-material">
+      Base Material
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="base-material" name="base-material" placeholder="" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="support-layer">
+       Support Layer
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="support-layer" name="support-layer" placeholder="" required="" type="text"/>
+      </div>
+     </div>
+     <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-3">
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="comfort-layer">
+      Comfort Layer
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="comfort-layer" name="comfort-layer" placeholder="" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="extra-layer">
+     Extra Layer
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="extra-layer" name="extra-layer" placeholder="" required="" type="text"/>
+      </div>
+     </div>
+     <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-3">
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="finishing">
+      Finishing
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="finishing" name="finishing" placeholder="" required="" type="text"/>
+      </div>
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="size"></label>
+       Size
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="size" name="size" placeholder="" required="" type="text"/>
+      </div>
+     </div>
+    <div class="grid grid-cols-2 gap-x-4 gap-y-3 mb-3">
+     <div>
+      <label class="block mb-1 text-[8px] text-white opacity-100" for="tanggal">
+       Tanggal
+      </label>
+      <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="tanggal" name="tanggal" required="" type="date"/>
+     </div>
+      <div>
+       <label class="block mb-1 text-[8px] text-white opacity-100" for="total-price">
+      Total Price
+       </label>
+       <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="total-price" name="total-price" placeholder="" required="" type="text"/>
+      </div>
+      <div>
+        <label class="block mb-1 text-[8px] text-white opacity-100" for="nama-agent">
+         Nama Agent
+        </label>
+        <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="nama-agent" name="nama-agent" placeholder="" required="" type="text"/>
+       </div>
+       <div>
+        <label class="block mb-1 text-[8px] text-white opacity-100" for="custom-name">
+         Custom Name
+        </label>
+        <input class="w-full bg-transparent border-b border-white border-opacity-50 text-[8px] text-white py-1 focus:outline-none" id="custom-name" name="custom-name" placeholder="" required="" type="text"/>
+       </div>
+     </div>
+    
+    </div>
+    <button
+      type="submit"
+      class="form-button"
+      onclick="sendWhatsAppMessage(event)"
+    >
+      Kirim
+    </button>
+    <script>
+      function sendWhatsAppMessage(e) {
+        e.preventDefault();
+
+        const form = document.querySelector("form");
+        const formData = new FormData(form);
+
+        // Ambil semua data form
+        const nama = formData.get("nama-depan");
+        const alamat = formData.get("Alamat");
+        const nohp = formData.get("no-handphone");
+        const email = formData.get("email");
+        const base = formData.get("base-material");
+        const support = formData.get("support-layer");
+        const comfort = formData.get("comfort-layer");
+        const extra = formData.get("extra-layer");
+        const finishing = formData.get("finishing");
+        const size = formData.get("size");
+        const tanggal = formData.get("tanggal");
+        const total = formData.get("total-price");
+        const agent = formData.get("nama-agent");
+        const custom = formData.get("custom-name");
+
+        // Format pesan WhatsApp
+        const pesan = `Halo, saya ingin melakukan pembayaran dengan detail berikut:%0A` +
+          `Nama: ${nama}%0A` +
+          `Alamat: ${alamat}%0A` +
+          `No. Handphone: ${nohp}%0A` +
+          `Email: ${email}%0A` +
+          `Base Material: ${base}%0A` +
+          `Support Layer: ${support}%0A` +
+          `Comfort Layer: ${comfort}%0A` +
+          `Extra Layer: ${extra}%0A` +
+          `Finishing: ${finishing}%0A` +
+          `Size: ${size}%0A` +
+          `Tanggal: ${tanggal}%0A` +
+          `Total Price: ${total}%0A` +
+          `Nama Agent: ${agent}%0A` +
+          `Custom Name: ${custom}`;
+
+        // Ganti nomor berikut dengan nomor WhatsApp tujuan (format internasional tanpa +)
+        const nomorTujuan = "6281336069667";
+        const url = `https://wa.me/${nomorTujuan}?text=${pesan}`;
+
+        // Kirim data ke Google Apps Script juga
+        form.requestSubmit();
+
+        // Buka WhatsApp
+        window.open(url, "_blank");
+      }
+    </script>
+    <p id="status" class="mt-2 text-white text-[10px]"></p>
+        <button type="button" onclick="window.print()" class="form-button">PRINT</button>
+      
+      </form>
+      <script>
+        const form = document.querySelector("form");
+        const status = document.getElementById("status");
+      
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          
+          const formData = new FormData(form);
+          const params = new URLSearchParams();
+      
+          // Ganti nama-nama sesuai parameter Google Apps Script
+          params.append("nama", formData.get("nama-depan"));
+          params.append("alamat", formData.get("Alamat"));
+          params.append("nohp", formData.get("no-handphone"));
+          params.append("email", formData.get("email"));
+          params.append("base", formData.get("base-material"));
+          params.append("support", formData.get("support-layer"));
+          params.append("comfort", formData.get("comfort-layer"));
+          params.append("extra", formData.get("extra-layer"));
+          params.append("finishing", formData.get("finishing"));
+          params.append("size", formData.get("size"));
+          params.append("tanggal", formData.get("tanggal"));
+          params.append("total", formData.get("total-price"));
+          params.append("agent", formData.get("nama-agent"));
+          params.append("custom", formData.get("custom-name"));
+      
+          fetch("https://script.google.com/macros/s/AKfycbwelh4F0i21IpYYFlPy6vWaix9WIjZrXYqwU2fsTLR7V1trtspvwBiJZAWL1Flh6a5u/exec", {
+            method: "POST",
+            body: params,
+          })
+          .then(response => response.text())
+          .then(result => {
+            status.textContent = "✅ " + result;
+            form.reset();
+          })
+          .catch(error => {
+            console.error("Error:", error);
+            status.textContent = "❌ Gagal mengirim data.";
+          });
+        });
+      </script>
+      
+    </main>
+    <script src="java script preview.js"></script>
+  </body>
+</html>
